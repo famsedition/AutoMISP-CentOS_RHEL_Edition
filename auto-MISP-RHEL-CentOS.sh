@@ -723,7 +723,8 @@ fi
 
 print_status "Adding Listener on port 443 to httpd.conf.."
 
-sed -i 's#Listen 80#Listen 80\nListen 443#' /etc/httpd/conf/httpd.conf
+sed -i 's/#Listen 80/Listen 80/' /etc/httpd/conf/httpd.conf
+sed -i 's/#Listen 443/Listen 443/' /etc/httpd/conf/httpd.conf
 error_check 'httpd.conf configuration'
 
 systemctl enable --now httpd.service &>> $logfile
