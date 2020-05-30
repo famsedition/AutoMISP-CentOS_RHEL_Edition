@@ -917,7 +917,7 @@ error_check 'session timeout setSettings command 3 (of 3)'
 print_notification "Setting MISP BaseURL.."
 $SUDO_WWW $RUN_PHP -- $CAKE Baseurl $MISP_BASEURL &>> $logfile
 error_check 'BaseURL setSettings command 1'
-$SUDO_WWW $RUN_PHP -- $CAKE Admin setSetting "MISP.external_baseurl" $MISP_BASEURL &>> $logfile
+$SUDO_WWW $RUN_PHP -- $CAKE Admin setSetting "MISP.external_baseurl" $MISP_EXTERNALBASEURL &>> $logfile
 error_check 'BaseURL setSettings command 2'
 
 #these settings are to tell MISP where the GPG stuff is. Kinda useless to set this because we aren't enabling E-mail, but this is fine.
