@@ -585,7 +585,7 @@ else
         SetEnvIf Authorization \"(.*)\" HTTP_AUTHORIZATION=$1
         DirectoryIndex /index.php index.php
         <FilesMatch \.php$>
-            SetHandler \"proxy:fcgi://127.0.0.1:9000\"
+            SetHandler \"proxy:fcgi://127.0.0.1:9002\"
         </FilesMatch>
     </IfModule>
     RewriteEngine On
