@@ -1,0 +1,5 @@
+commands needing before executing a second time
+yum remove rh-mariadb102-mariadb -y
+rm -rf /usr/local/src/misp-modules/
+rm -rf /var/opt/rh/rh-mariadb102/
+rm -rf /root/misp_creds
