@@ -307,6 +307,9 @@ echo 'source scl_source enable rh-python36' | sudo tee -a /etc/opt/rh/rh-php72/s
 error_check 'addition of python to php sysconfig'
 sed -i.org -e 's/^;\(clear_env = no\)/\1/' /etc/opt/rh/rh-php72/php-fpm.d/www.conf &>> $logfile
 
+#########################################
+#changing FastCGI listening address
+sed -i -e 's/127.0.0.1:9000/127.0.0.1:9002/g' /etc/opt/rh/rh-php72/php-fpm.d/www.conf &>> $logfile
 
 #########################################
 #configuration items to get CakePHP running, adding php extensions, and reconfiguring php.ini
