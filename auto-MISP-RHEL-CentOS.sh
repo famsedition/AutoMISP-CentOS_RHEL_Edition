@@ -946,9 +946,7 @@ error_check 'tunable setSetting command 5'
 $SUDO_WWW $RUN_PHP -- $CAKE Admin setSetting "MISP.showCorrelationsOnIndex" true &>> $logfile
 error_check 'tunable setSetting command 6'
 $SUDO_WWW $RUN_PHP -- $CAKE Admin setSetting "MISP.default_event_tag_collection" 0 &>> $logfile
-error_check 'tunable setSetting command 7'
-$SUDO_WWW $RUN_PHP -- $CAKE Admin setSetting "Security.disable_form_security" true &>> $logfile
-error_check 'tunable setSetting command 8 (of 8)'
+error_check 'tunable setSetting command 7 (of 7)'
 
 #These are cortex configuration options
 print_notification "Setting some configs to make Cortex integration easier.."
